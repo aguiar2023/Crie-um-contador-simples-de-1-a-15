@@ -1,0 +1,28 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Contador de 1 a 15</title>
+</head>
+<body>
+    <h1>Contador</h1>
+    <p id="contador">0</p>
+
+    <script>
+        let count = 0;
+
+        function incrementarContador() {
+            count++;
+            document.getElementById("contador").textContent = count;
+
+            if (count === 15) {
+                clearInterval(intervalId);
+                alert("Contagem finalizada!");
+            }
+        }
+
+        const intervalId = setInterval(incrementarContador, 1000); // Ajuste o intervalo em milissegundos (1000ms = 1 segundo)
+    </script>
+</body>
+</html>
